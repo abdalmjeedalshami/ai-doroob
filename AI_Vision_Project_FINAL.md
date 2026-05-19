@@ -16,7 +16,7 @@ A modular **computer vision pipeline** for car understanding, including vehicle 
 ```mermaid
 flowchart TD
 
-A[Input Image / Video]
+A[Input Image]
 
 A --> B[YOLOv8m<br/>Vehicle Detection]
 B --> C[Crop Vehicle]
@@ -38,19 +38,19 @@ D4 --> F
 ---
 ## Project Structure
 
-- **assets/local-statices/data/** — temporary dataset storage (not used by scripts)
-- **input/** — input images/videos for testing
+- **assets/local-statices/**
+- **input/** — input images for testing
 - **models/** — model configs + pretrained weights (download externally)
 - **notebooks/** — experiments, training notebooks
-- **outputs/** — pipeline outputs
+- **outputs/** — pipeline outputs (created with run)
 - **src/pipelines/** — core pipeline modules:
   - `brand_predict.py` — vehicle brand prediction
   - `color_predict.py` — vehicle color prediction
   - `ocr.py` — license plate OCR
   - `plate_crop.py` — crop license plates
   - `vehicle_detect.py` — detect vehicles
-- **requirements_tensorflow.txt** — TensorFlow dependencies
-- **requirements_paddle.txt** — Paddle dependencies
+- **requirements_tensorflow.txt** — TensorFlow dependencies (first virtual environment)
+- **requirements_paddle.txt** — Paddle dependencies (second virtual environment)
 - **run_pipeline.py** — main script to run the pipeline
 
 ---
@@ -99,7 +99,7 @@ source venvs/venv_paddle/bin/deactivate
 ## 🤖 Models
 
 ### ✅ Pretrained models (currently used)
-The project requires the following pretrained model weights. <b>These are not included in the repository</b> and must be downloaded from <b>Google Drive<b/>:
+The project requires the following pretrained model weights. <b>These are not included in the repository</b> and must be downloaded from <b>Google Drive</b>:
 
 [**Download Pretrained Models**](https://drive.google.com/drive/folders/1Kx7fkI68of8oPhWpgpJ6HVY1ez3ZUASm?usp=drive_link)
 

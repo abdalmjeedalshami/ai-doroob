@@ -1,0 +1,31 @@
+import subprocess
+import os
+
+print("Starting full pipeline...")
+
+BASE = os.getcwd()
+
+tf_python = os.path.join(BASE, "envs", "venv_tf", "Scripts", "python.exe")
+paddle_python = os.path.join(BASE, "envs", "venv_paddle", "Scripts", "python.exe")
+
+# Step 1: Vehicle detection
+print("Step 1: Detection")
+subprocess.run([tf_python, "pipelines/vehicle-detect.py"], check=True)
+
+# Step 2: Plate detection
+print("Step 2: Plate detection")
+subprocess.run([tf_python, "pipelines/plate_crop.py"], check=True)
+
+# Step 3: OCR
+print("Step 3: OCR")
+subprocess.run([paddle_python, "pipelines/ocr.py"], check=True)
+
+# Step 4: Brand prediction
+print("Step 4: Brand prediction")
+subprocess.run([tf_python, "pipelines/brand-predict.py"], check=True)
+
+# Step 5: Color prediction
+print("Step 5: Color prediction")
+subprocess.run([tf_python, "pipelines/color-predict.py"], check=True)
+
+print("✅ Pipeline finished")

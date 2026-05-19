@@ -1,0 +1,40 @@
+# AI Vision Project
+
+A car brand recognition pipeline using computer vision, supporting TensorFlow and Paddle frameworks. Modular structure for training, inference, and data processing.
+
+## Project Structure
+- src/: source code (pipelines, training)
+- notebooks/: Jupyter notebooks for experiments
+- data/: input data, metadata (carmodels.xlsx), sample inputs/outputs
+- models/: model configurations (weights stored externally)
+- outputs/: pipeline outputs
+- requirements-tensorflow.txt: TensorFlow dependencies
+- requirements-paddle.txt: Paddle dependencies
+- run_pipeline.py: main pipeline script
+
+## Installation
+- Clone repo
+- Create separate virtual environments for TensorFlow (`venv_tf`) and Paddle (`venv_paddle`)
+- Install dependencies from respective requirements files
+
+## Models
+- Models folder contains configs
+- Download pretrained models externally (Google Drive)
+
+## Usage
+- Run pipeline: `python run_pipeline.py --input input --output output`
+
+## Training
+- Scripts in src/training/training-brand-model/
+- Example: `python src/training/training-brand-model.py`
+
+## Notes
+- Do not upload virtual environments
+- Avoid uploading large output data
+
+## Recommended Tools
+- Python 3.9+, Jupyter Notebook, VS Code / PyCharm
+
+## Contact
+- Contact info and GitHub link
+- https://github.com/abdalmjeedalshami/ai-doroob
