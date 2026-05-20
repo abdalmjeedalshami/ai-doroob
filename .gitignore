@@ -1,0 +1,82 @@
+# =========================
+# 🐍 Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# =========================
+# 🧪 Virtual Environments
+# =========================
+venv/
+venvs/
+.env/
+.env.*
+
+# =========================
+# 📁 Project-specific ignores
+# =========================
+
+# Temporary dataset storage (not used in pipeline)
+assets/local-statices/data/
+
+# Input test files (optional to keep local only)
+# input/
+
+# Model weights (download externally)
+# models/
+
+# Notebook outputs / checkpoints
+notebooks/.ipynb_checkpoints/
+
+# Pipeline outputs (results, predictions)
+outputs/
+
+# =========================
+# 🖼️ Ignore Images (ALL)
+# =========================
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.gif
+*.webp
+
+# =========================
+# 📊 Logs & temp files
+# =========================
+*.log
+*.tmp
+*.cache
+
+# =========================
+# 🧠 IDE / Editor files
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# System files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🔥 Optional (keep or remove depending on use)
+# =========================
+
+# Uncomment if you DON'T want notebooks on GitHub
+# notebooks/
+
+# Uncomment if models configs should be tracked but not weights
+*.pt
+*.pth

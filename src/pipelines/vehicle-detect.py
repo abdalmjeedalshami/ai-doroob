@@ -6,7 +6,7 @@ import os
 model = YOLO("./models/yolov8m.pt")
 
 # ---------------- INPUT / OUTPUT ----------------
-input_folder = "./input_image"
+input_folder = "./input"
 output_root = "./outputs"
 
 os.makedirs(output_root, exist_ok=True)

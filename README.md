@@ -74,16 +74,16 @@ python -m venv venvs/venv_paddle
 
 **TensorFlow**
 ```bash
-source venvs/venv_tf/bin/activate
+.\venvs\venv_tf\Scripts\activate
 pip install -r requirements_tensorflow.txt
-source venns/venv_tensorflow/bin/deactivate
+deactivate
 ```
 
 **Paddle**
 ```bash
-source venvs/venv_paddle/bin/activate
+.\venvs\venv_paddle\Scripts\activate
 pip install -r requirements_paddle.txt
-source venvs/venv_paddle/bin/deactivate
+deactivate
 ```
 
 ---
@@ -101,7 +101,7 @@ source venvs/venv_paddle/bin/deactivate
 ### ✅ Pretrained models (currently used)
 The project requires the following pretrained model weights. <b>These are not included in the repository</b> and must be downloaded from <b>Google Drive<b/>:
 
-[**Download Pretrained Models**](https://drive.google.com/drive/folders/1Kx7fkI68of8oPhWpgpJ6HVY1ez3ZUASm?usp=drive_link)
+[**Download Pretrained Models**](https://drive.google.com/drive/folders/1KrWB43fDjYw4sxURMvt00j2jHkdWtXI5?usp=sharing)
 
 After downloading, replace the `models/` folder. The pipeline will automatically use them.
 
